@@ -1,0 +1,89 @@
+
+<!-- This is a text animation project mostly copied one-to-one from this video:
+    "Text Animation" https://youtu.be/Is9MXXTV9tc 
+    I only changed the contents of the text and the colours. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+        body {
+            margin: 0px;
+            font-family: 'Roboto';
+            text-align: center;
+        }
+        #container {
+            color: #787474;
+            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: bold;
+            padding-top: 200px;
+            position: fixed;
+            width: 100%;
+            bottom: 30%;
+            display: block;
+        }
+        #flip {
+            height: 50px;
+            overflow: hidden;
+        }
+        #flip>div>div {
+            color: #fff;
+            padding: 4px 12px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: inline-block;
+        }
+        #flip div:first-child {
+            animation: show 5s linear infinite;
+        }
+        #flip div div {
+            background: #dc14ad;
+        }
+        #flip div:first-child div {
+            background: #882895;
+        }
+        #flip div:last-child div {
+            background: #dc143c;
+        }
+
+        @keyframes show {
+            0% {margin-top: -270px;}
+            5% {margin-top: -180px;}
+            33% {margin-top: -180px;}
+            38% {margin-top: -90px;}
+            66% {margin-top: -90px;}
+            71% {margin-top: 0px;}
+            99.99% {margin-top: 0px;}
+            100% {margin-top: -270px;}
+        }
+    </style>
+</head>
+
+<body>
+    <h2>hey bubby <3</h2>
+    <img src="images/photo_01.png" alt="pic_1" style="width: 300px; height: 300px;">
+    <img src="images/photo_02.png" alt="pic_2" style="width: 240px; height: 300px;">
+    <img src="images/photo_03.png" alt="pic_3" style="width: 240px; height: 300px;">
+    <div id=container>
+        I...
+        <div id=flip>
+            <div>
+                <div>Am crazy about</div>
+            </div>
+            <div>
+                <div>Adore</div>
+            </div>
+            <div>
+                <div>Love</div>
+            </div>
+        </div>
+        YOU!
+    </div>
+</body>
+
+</html>
